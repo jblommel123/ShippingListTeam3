@@ -23,7 +23,7 @@ namespace ShoppingListTeam3.Services
             using (var ctx = new ShoppingListDbContext())
             {
                 return ctx.ShoppingLists.Where(e => e.UserID == _userID).Select(
-                    e => new ShoppingListViewModel { ID = e.ID, Name = e.Name, Color = e.Color, Group = e.Group, CreatedUtc = e.CreatedUtc }
+                    e => new ShoppingListViewModel { ID = e.ID, Name = e.Name, Color = e.Color, Group = e.Group, CreatedUtc = e.CreatedUtc, ModifieddUtc = e.ModifieddUtc }
                 ).ToArray();
             }
         }
@@ -41,8 +41,10 @@ namespace ShoppingListTeam3.Services
                 {
                     ID = entity.ID,
                     Name = entity.Name,
+                    Group = entity.Group,
                     Color = entity.Color,
-                    CreatedUtc = entity.CreatedUtc
+                    CreatedUtc = entity.CreatedUtc,
+                    ModifieddUtc = entity.ModifieddUtc
                 };
             else
                 return null;
@@ -58,6 +60,7 @@ namespace ShoppingListTeam3.Services
                         UserID = _userID,
                         Name = vm.Name,
                         Color = vm.Color,
+                        Group = vm.Group,
                         CreatedUtc = DateTimeOffset.Now,
                     };
 
@@ -75,6 +78,7 @@ namespace ShoppingListTeam3.Services
 
                 entity.Name = vm.Name;
                 entity.Color = vm.Color;
+                entity.Group = vm.Group;
                 entity.ModifieddUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;

@@ -12,16 +12,20 @@ namespace ShoppingListTeam3.Models
         [Key]
         public int ID { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [RegularExpression (@"^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$", ErrorMessage = "Not a correct value for Hex Color Code")]
         public string Color { get; set; }
 
+        [Required]
         public string Group { get; set; }
 
+        [Required]
         [Display (Name = "Created Date")]
         public DateTimeOffset CreatedUtc { get; set; }
 
         [Display(Name = "Modified Date")]
-        public DateTimeOffset ModifieddUtc { get; set; }
+        public DateTimeOffset? ModifieddUtc { get; set; }
     }
 }

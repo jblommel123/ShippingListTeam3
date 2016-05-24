@@ -14,3 +14,5 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.InitialCreate.resources
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csproj.GenerateResource.Cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.Update.resources
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csprojResolveAssemblyReference.cache
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.ModifyShoppingListInDataLayer.resources

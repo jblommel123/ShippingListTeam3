@@ -24,7 +24,7 @@ namespace ShoppingListTeam3.Data
 
         public DateTimeOffset CreatedUtc { get; set; }
 
-        public DateTimeOffset ModifieddUtc { get; set; }
+        public DateTimeOffset? ModifieddUtc { get; set; }
 
         public ICollection<Item> Items { get; set; }
     }
