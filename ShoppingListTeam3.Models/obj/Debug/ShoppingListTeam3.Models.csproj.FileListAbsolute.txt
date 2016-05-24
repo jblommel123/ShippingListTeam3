@@ -1,0 +1,5 @@
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\ShoppingListTeam3.Models.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\ShoppingListTeam3.Models.pdb
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.csprojResolveAssemblyReference.cache
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.pdb
