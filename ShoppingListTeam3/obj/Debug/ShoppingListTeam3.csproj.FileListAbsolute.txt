@@ -32,6 +32,9 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.O
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Newtonsoft.Json.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Owin.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Data.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Models.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Services.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Helpers.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Mvc.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Optimization.dll
@@ -40,6 +43,9 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.WebPages.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.WebPages.Razor.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\WebGrease.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Data.pdb
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Models.pdb
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Services.pdb
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Helpers.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Mvc.xml
