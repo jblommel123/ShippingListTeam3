@@ -37,6 +37,7 @@ namespace ShoppingListTeam3.Controllers
         }
 
         // GET: ShoppingList/Details/5
+        //public ActionResult Details(int? id, string p1)
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -44,6 +45,7 @@ namespace ShoppingListTeam3.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             ShoppingListViewModel shoppingListViewModel = _svc.Value.GetListByID(id);
+            //ViewBag.p1 = p1;
             if (shoppingListViewModel == null)
             {
                 return HttpNotFound();
@@ -62,7 +64,7 @@ namespace ShoppingListTeam3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Color,Group,CreatedUtc,ModifieddUtc")] ShoppingListViewModel shoppingListViewModel)
+        public ActionResult Create([Bind(Include = "ID,Name,Color,Group")] ShoppingListViewModel shoppingListViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +95,7 @@ namespace ShoppingListTeam3.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Color,Group,CreatedUtc,ModifieddUtc")] ShoppingListViewModel shoppingListViewModel)
+        public ActionResult Edit([Bind(Include = "ID,Name,Color,Group")] ShoppingListViewModel shoppingListViewModel)
         {
             if (ModelState.IsValid)
             {

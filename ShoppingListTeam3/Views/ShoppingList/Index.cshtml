@@ -47,8 +47,9 @@
             @Html.DisplayFor(modelItem => item.ModifieddUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID}) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID}) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.ID, p1 = "Hello" }) |*@
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
