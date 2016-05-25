@@ -1,38 +1,37 @@
-﻿@model ShoppingListTeam3.Models.ShoppingListViewModel
+﻿@model ShoppingListTeam3.Models.ItemViewModel
 
 @{
     ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
-@*<h2>I am a URL Rewrite Example @ViewBag.p1</h2>*@
 
 <div>
-    <h4>ShoppingListViewModel</h4>
+    <h4>ItemViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Content)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.Content)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Color)
+            @Html.DisplayNameFor(model => model.Priority)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Color)
+            @Html.DisplayFor(model => model.Priority)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Group)
+            @Html.DisplayNameFor(model => model.IsChecked)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Group)
+            @Html.DisplayFor(model => model.IsChecked)
         </dd>
 
         <dt>

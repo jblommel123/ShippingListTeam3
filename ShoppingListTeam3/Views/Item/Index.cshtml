@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ShoppingListTeam3.Models.ShoppingListViewModel>
+﻿@model IEnumerable<ShoppingListTeam3.Models.ItemViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.IsChecked)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Color)
+            @Html.DisplayNameFor(model => model.Content)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Group)
+            @Html.DisplayNameFor(model => model.Priority)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -32,13 +32,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            @Html.DisplayFor(modelItem => item.IsChecked)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Color)
+            @Html.DisplayFor(modelItem => item.Content)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Group)
+            @Html.DisplayFor(modelItem => item.Priority)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
@@ -47,9 +47,8 @@
             @Html.DisplayFor(modelItem => item.ModifiedUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID}) |
-            @Html.ActionLink("Details", "../Item/Index", new { id = item.ID}) |
-            @*@Html.ActionLink("Details", "Details", new { id=item.ID, p1 = "Hello" }) |*@
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>

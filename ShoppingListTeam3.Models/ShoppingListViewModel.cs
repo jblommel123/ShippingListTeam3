@@ -26,6 +26,6 @@ namespace ShoppingListTeam3.Models
         public DateTimeOffset CreatedUtc { get; set; }
 
         [Display(Name = "Modified Date")]
-        public DateTimeOffset? ModifieddUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201605241912148_ModifyShoppingListInDataLayer.Designer.cs">
       <DependentUpon>201605241912148_ModifyShoppingListInDataLayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605251432403_UpdateDataLayer.cs" />
+    <Compile Include="Migrations\201605251432403_UpdateDataLayer.Designer.cs">
+      <DependentUpon>201605251432403_UpdateDataLayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605241912148_ModifyShoppingListInDataLayer.resx">
       <DependentUpon>201605241912148_ModifyShoppingListInDataLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605251432403_UpdateDataLayer.resx">
+      <DependentUpon>201605251432403_UpdateDataLayer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

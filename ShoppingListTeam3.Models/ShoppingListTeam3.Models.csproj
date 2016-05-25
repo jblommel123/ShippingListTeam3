@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemViewModel.cs" />
     <Compile Include="ShoppingListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShoppingListTeam3.Data\ShoppingListTeam3.Data.csproj">
+      <Project>{7634D828-8AC3-4025-B325-5B663A261A9B}</Project>
+      <Name>ShoppingListTeam3.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
