@@ -16,81 +16,82 @@ namespace ShoppingListTeam3.Services
             {
                 string query = "SELECT * FROM Item WHERE ShoppingListID = @p0";
                 return ctx.Items.SqlQuery(query, id).Select(
-                    e => new ItemViewModel { ID = e.ID, Content = e.Content, IsChecked = e.IsChecked, CreatedUtc = e.CreatedUtc, ModifiedUtc = e.ModifiedUtc }
+                    e => new ItemViewModel { ID = e.ID, ShoppingListID = id.Value, Priority = e.Priority, Content = e.Content, IsChecked = e.IsChecked, CreatedUtc = e.CreatedUtc, ModifiedUtc = e.ModifiedUtc }
                 ).ToArray();
             }
         }
 
-        //public ShoppingListViewModel GetListByID(int? id)
-        //{
-        //    ShoppingList entity;
+        public ItemViewModel GetItemByID(int? id)
+        {
+            Item entity;
 
-        //    using (var ctx = new ShoppingListDbContext())
-        //    {
-        //        entity = ctx.ShoppingLists.SingleOrDefault(e => e.ID == id);
-        //    }
-        //    if (entity != null)
-        //        return new ShoppingListViewModel
-        //        {
-        //            ID = entity.ID,
-        //            Name = entity.Name,
-        //            Group = entity.Group,
-        //            Color = entity.Color,
-        //            CreatedUtc = entity.CreatedUtc,
-        //            ModifieddUtc = entity.ModifieddUtc
-        //        };
-        //    else
-        //        return null;
-        //}
+            using (var ctx = new ShoppingListDbContext())
+            {
+                entity = ctx.Items.SingleOrDefault(e => e.ID == id);
+            }
+            if (entity != null)
+                return new ItemViewModel
+                {
+                    ID = entity.ID,
+                    ShoppingListID = entity.ShoppingListID,
+                    Content = entity.Content,
+                    IsChecked = entity.IsChecked,
+                    Priority = entity.Priority,
+                    CreatedUtc = entity.CreatedUtc,
+                    ModifiedUtc = entity.ModifiedUtc
+                };
+            else
+                return null;
+        }
 
-        //public bool CreateList(ShoppingListViewModel vm)
-        //{
-        //    using (var ctx = new ShoppingListDbContext())
-        //    {
-        //        var entity =
-        //            new ShoppingList
-        //            {
-        //                UserID = _userID,
-        //                Name = vm.Name,
-        //                Color = vm.Color,
-        //                Group = vm.Group,
-        //                CreatedUtc = DateTimeOffset.Now,
-        //            };
+        public bool CreateItem(ItemViewModel vm, int shoppingListId)
+        {
+            using (var ctx = new ShoppingListDbContext())
+            {
+                var entity =
+                    new Item
+                    {
+                        ShoppingListID = shoppingListId,
+                        Content = vm.Content,
+                        Priority = vm.Priority,
+                        IsChecked = vm.IsChecked,
+                        CreatedUtc = DateTimeOffset.Now,
+                    };
 
-        //        ctx.ShoppingLists.Add(entity);
+                ctx.Items.Add(entity);
 
-        //        return ctx.SaveChanges() == 1;
-        //    }
-        //}
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
-        //public bool UpdateList(ShoppingListViewModel vm)
-        //{
-        //    using (var ctx = new ShoppingListDbContext())
-        //    {
-        //        var entity = ctx.ShoppingLists.SingleOrDefault(e => e.ID == vm.ID);
+        public bool UpdateItem(ItemViewModel vm)
+        {
+            using (var ctx = new ShoppingListDbContext())
+            {
+                var entity = ctx.Items.SingleOrDefault(e => e.ID == vm.ID);
 
-        //        entity.Name = vm.Name;
-        //        entity.Color = vm.Color;
-        //        entity.Group = vm.Group;
-        //        entity.ModifieddUtc = DateTimeOffset.Now;
+                entity.Content = vm.Content;
+                entity.Priority = vm.Priority;
+                entity.IsChecked = vm.IsChecked;
+                entity.ModifiedUtc = DateTimeOffset.Now;
 
-        //        return ctx.SaveChanges() == 1;
-        //    }
-        //}
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
-        //public bool DeleteList(int? id)
-        //{
-        //    using (var ctx = new ShoppingListDbContext())
-        //    {
-        //        //ctx.Database.ExecuteSqlCommand($"DELETE FROM Review WHERE ProductID = {id}");
+        public bool DeleteItem(int? id)
+        {
+            using (var ctx = new ShoppingListDbContext())
+            {
+                //ctx.Database.ExecuteSqlCommand($"DELETE FROM Review WHERE ProductID = {id}");
 
-        //        var entity = ctx.ShoppingLists.SingleOrDefault(e => e.ID == id);
+                var entity = ctx.Items.SingleOrDefault(e => e.ID == id);
 
-        //        // TODO: Handle note not found
-        //        ctx.ShoppingLists.Remove(entity);
+                // TODO: Handle note not found
+                ctx.Items.Remove(entity);
 
-        //        return ctx.SaveChanges() == 1;
-        //    }
-        //}
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

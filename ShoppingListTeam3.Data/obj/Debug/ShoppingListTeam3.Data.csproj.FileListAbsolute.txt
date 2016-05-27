@@ -9,11 +9,11 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.dll
-C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.pdb
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.InitialCreate.resources
-C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csproj.GenerateResource.Cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.Update.resources
-C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csprojResolveAssemblyReference.cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.ModifyShoppingListInDataLayer.resources
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.UpdateDataLayer.resources
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.FixingDataLayer.resources
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csproj.GenerateResource.Cache
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.pdb

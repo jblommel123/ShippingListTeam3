@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>ItemViewModel</h4>
         <hr />
@@ -28,11 +28,34 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Priority, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Priority, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Priority, "", new { @class = "text-danger" })
+                @{
+                    List<SelectListItem> listPriorities = new List<SelectListItem>();
+                    listPriorities.Add(
+                        new SelectListItem
+                        {
+                            Text = "Grab it now!",
+                            Value = "1",
+                        }
+                    );
+                    listPriorities.Add(
+                        new SelectListItem
+                        {
+                            Text = "Need it soon",
+                            Value = "2",
+                        }
+                    );
+                    listPriorities.Add(
+                        new SelectListItem
+                        {
+                            Text = "It can wait",
+                            Value = "3"
+                        }
+                    );
+                }
+
+                @Html.DropDownListFor(model => model.Priority, listPriorities, new { @class = "btn btn-default" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.IsChecked, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -44,31 +67,15 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreatedUtc, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CreatedUtc, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreatedUtc, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ModifiedUtc, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ModifiedUtc, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ModifiedUtc, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
-}
+                    }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new { id = ViewBag.shoppingListID })
 </div>
 
 @section Scripts {

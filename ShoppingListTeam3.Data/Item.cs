@@ -12,7 +12,6 @@ namespace ShoppingListTeam3.Data
         [Key]
         public int ID { get; set; }
         public int ShoppingListID { get; set; }
-        public int NoteID { get; set; }
         public string Content { get; set; }
         public int Priority { get; set; }
         public bool IsChecked { get; set; }
@@ -20,7 +19,5 @@ namespace ShoppingListTeam3.Data
         public DateTimeOffset? ModifiedUtc { get; set; }
 
         public virtual ShoppingList ShoppingList { get; set; }
-
-        public virtual Note Note { get; set; }
     }
 }

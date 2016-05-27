@@ -12,8 +12,11 @@ namespace ShoppingListTeam3.Data
     {
         [Key]
         public int ID { get; set; }
+        public int ItemId { get; set;}
         public string Body { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+
+        public virtual Item Item { get; set; }
     }
 }
