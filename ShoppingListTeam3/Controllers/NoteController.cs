@@ -32,9 +32,10 @@ namespace ShoppingListTeam3.Controllers
         }
 
         // GET: Item/Create
-        public ActionResult Create(int itemID)
+        public ActionResult Create(int id, int shoppingListID)
         {
-            ViewBag.itemID = itemID;
+            ViewBag.shoppingListID = shoppingListID;
+            ViewBag.itemID = id;
             return View();
         }
 

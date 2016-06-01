@@ -93,6 +93,6 @@ else
     if (ViewBag.itemID != null)
     {
         <p>There is no note associated to this item.</p>
-        @Html.ActionLink("Create a Note", "../Note/Create", new { itemID = @ViewBag.itemID })
+        @Html.ActionLink("Create a Note", "../Note/Create", new { id = @ViewBag.itemID, shoppingListID = @ViewBag.shoppingListID})
     }
 }

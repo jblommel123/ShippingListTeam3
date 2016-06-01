@@ -1,4 +1,3 @@
-C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\obj\Debug\ShoppingListTeam3.Services.csprojResolveAssemblyReference.cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\Debug\ShoppingListTeam3.Services.dll.config
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\Debug\ShoppingListTeam3.Services.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\Debug\ShoppingListTeam3.Services.pdb
@@ -14,5 +13,6 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\De
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\obj\Debug\ShoppingListTeam3.Services.csprojResolveAssemblyReference.cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\obj\Debug\ShoppingListTeam3.Services.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Services\obj\Debug\ShoppingListTeam3.Services.pdb
