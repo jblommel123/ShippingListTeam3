@@ -89,7 +89,7 @@ namespace ShoppingListTeam3.Services
         {
             using (var ctx = new ShoppingListDbContext())
             {
-                //ctx.Database.ExecuteSqlCommand($"DELETE FROM Review WHERE ProductID = {id}");
+                //ctx.Database.ExecuteSqlCommand($"DELETE FROM Item WHERE ShoppingListID = {id}");
 
                 var entity = ctx.ShoppingLists.SingleOrDefault(e => e.ID == id);
 

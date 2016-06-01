@@ -15,14 +15,30 @@ namespace ShoppingListTeam3.Controllers
     public class ItemController : Controller
     {
         private readonly Lazy<ItemService> _svc = new Lazy<ItemService>();
+        private readonly Lazy<NoteService> _noteSvc = new Lazy<NoteService>();
 
         // GET: Item
-        public ActionResult Index(int? id)
+        public ActionResult Index(int? id, int? shoppingListID)
         {
             {
+                //ViewBag.shoppingListID = id;
+
+                //var Item = _svc.Value.GetItemsByShoppingListID(id.Value);
+                //return View(Item);
+                var viewModel = new ItemWithNoteViewModel();
+
                 ViewBag.shoppingListID = id;
-                var Item = _svc.Value.GetItemsByShoppingListID(id.Value);
-                return View(Item);
+
+                viewModel.Items = _svc.Value.GetItemsByShoppingListID(id.Value);
+                if (shoppingListID != null)
+                {
+                    ViewBag.itemID = id.Value;
+                    ViewBag.shoppingListID = shoppingListID.Value;
+                    viewModel.Items = _svc.Value.GetItemsByShoppingListID(shoppingListID.Value);
+                    viewModel.Note = _noteSvc.Value.GetNoteByItemID(id.Value);
+                }
+                    
+                return View(viewModel);
             }
         }
 
@@ -119,5 +135,7 @@ namespace ShoppingListTeam3.Controllers
             return RedirectToAction("Index", new { id = shoppingListID });
         }
     }
+
 }
+
 

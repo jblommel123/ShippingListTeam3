@@ -17,6 +17,7 @@ namespace ShoppingListTeam3.Models
         public string Content { get; set; }
         [Required]
         public int Priority { get; set; }
+        [Display(Name = "Checked")]
         public bool IsChecked { get; set; }
         [Display(Name = "Created Date")]
         public DateTimeOffset CreatedUtc { get; set; }

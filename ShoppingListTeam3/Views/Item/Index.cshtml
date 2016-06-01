@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ShoppingListTeam3.Models.ItemViewModel>
+﻿@model ShoppingListTeam3.Models.ItemWithNoteViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -14,23 +14,28 @@
     <tr>
         <th></th>
         <th>
-            @Html.DisplayNameFor(model => model.Content)
+            Content
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Priority)
+            Priority
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
+            Created Date
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ModifiedUtc)
+            Modified Date
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model.Items)
     {
-        <tr>
+        string selectedRow = "";
+        if (item.ID == ViewBag.itemID)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
             <td>
                 @Html.DisplayFor(modelItem => item.IsChecked)
             </td>
@@ -47,11 +52,47 @@
                 @Html.DisplayFor(modelItem => item.ModifiedUtc)
             </td>
             <td>
+                @Html.ActionLink("Select", "Index", new { id = item.ID, shoppingListID = ViewBag.shoppingListID }) |
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID, shoppingListID = ViewBag.shoppingListID}) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID, ViewBag.shoppingListID})
             </td>
         </tr>
     }
 
 </table>
+@if (Model.Note != null)
+{
+    <h3>Note Detail</h3>
+    <table class="table">
+        <tr>
+            <th>Body</th>
+            <th>Created Date</th>
+            <th>Modified Date</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                @Model.Note.Body
+            </td>
+            <td>
+                @Model.Note.DisplayDateTimeOffset(Model.Note.CreatedUtc)
+            </td>
+            <td>
+                @Model.Note.DisplayDateTimeOffset(Model.Note.ModifiedUtc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "../Note/Edit", new { id = Model.Note.ItemId, shoppingListID = ViewBag.shoppingListID }) |
+                @Html.ActionLink("Delete", "../Note/Delete", new { id = Model.Note.ItemId, shoppingListID = ViewBag.shoppingListID },
+               new { onclick = "return confirm('Do you really want to delete this note?')" })
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+    if (ViewBag.itemID != null)
+    {
+        <p>There is no note associated to this item.</p>
+        @Html.ActionLink("Create a Note", "../Note/Create", new { itemID = @ViewBag.itemID })
+    }
+}

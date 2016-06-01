@@ -1,3 +1,4 @@
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\obj\Debug\ShoppingListTeam3.csprojResolveAssemblyReference.cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\roslyn\csc.exe
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -35,7 +36,10 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Owin.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Data.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Models.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Services.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Net.Http.Formatting.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Helpers.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Http.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Http.WebHost.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Mvc.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Optimization.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Razor.dll
@@ -47,6 +51,9 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingLis
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Models.pdb
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\ShoppingListTeam3.Services.pdb
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Net.Http.Formatting.xml
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Http.xml
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Http.WebHost.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Helpers.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Mvc.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\System.Web.Optimization.xml
@@ -70,6 +77,5 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.O
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\obj\Debug\ShoppingListTeam3.csprojResolveAssemblyReference.cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\obj\Debug\ShoppingListTeam3.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\obj\Debug\ShoppingListTeam3.pdb

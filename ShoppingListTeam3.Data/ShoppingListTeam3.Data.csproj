@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201605251902378_FixingDataLayer.Designer.cs">
       <DependentUpon>201605251902378_FixingDataLayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605311401331_Update-Data.cs" />
+    <Compile Include="Migrations\201605311401331_Update-Data.Designer.cs">
+      <DependentUpon>201605311401331_Update-Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605251902378_FixingDataLayer.resx">
       <DependentUpon>201605251902378_FixingDataLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605311401331_Update-Data.resx">
+      <DependentUpon>201605311401331_Update-Data.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

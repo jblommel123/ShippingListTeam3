@@ -43,6 +43,8 @@ namespace ShoppingListTeam3.Data
 
         public DbSet<ShoppingList> ShoppingLists { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Note> Notes { get; set; }
+
     }
 
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
