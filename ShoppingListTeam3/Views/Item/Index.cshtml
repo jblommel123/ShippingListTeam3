@@ -1,4 +1,7 @@
 ﻿@model ShoppingListTeam3.Models.ItemWithNoteViewModel
+    @using PagedList.Mvc;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -96,3 +99,11 @@ else
         @Html.ActionLink("Create a Note", "../Note/Create", new { id = @ViewBag.itemID, shoppingListID = @ViewBag.shoppingListID})
     }
 }
+
+<br />
+
+Page @(Model.Items.PageCount < Model.Items.PageNumber ? 0 : Model.Items.PageNumber) of @Model.Items.PageNumber
+
+    @Html.PagedListPager(Model.Items, page => Url.Action("Index", new { page }))
+            
+   

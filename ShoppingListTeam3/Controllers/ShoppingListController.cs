@@ -10,6 +10,7 @@ using ShoppingListTeam3.Data;
 using ShoppingListTeam3.Models;
 using ShoppingListTeam3.Services;
 using Microsoft.AspNet.Identity;
+using PagedList;
 
 namespace ShoppingListTeam3.Controllers
 {
@@ -30,10 +31,12 @@ namespace ShoppingListTeam3.Controllers
         }
 
         // GET: ShoppingList
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var ShoppingList = _svc.Value.GetList();
-            return View(ShoppingList);
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(ShoppingList.ToPagedList(pageNumber,pageSize));
         }
 
         // GET: ShoppingList/Details/5

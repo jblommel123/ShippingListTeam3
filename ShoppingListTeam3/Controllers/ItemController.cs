@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using ShoppingListTeam3.Data;
 using ShoppingListTeam3.Models;
 using ShoppingListTeam3.Services;
+using PagedList;
 
 namespace ShoppingListTeam3.Controllers
 {
@@ -18,7 +19,7 @@ namespace ShoppingListTeam3.Controllers
         private readonly Lazy<NoteService> _noteSvc = new Lazy<NoteService>();
 
         // GET: Item
-        public ActionResult Index(int? id, int? shoppingListID)
+        public ActionResult Index(int? id, int? shoppingListID, int? page)
         {
             {
                 //ViewBag.shoppingListID = id;
@@ -28,13 +29,15 @@ namespace ShoppingListTeam3.Controllers
                 var viewModel = new ItemWithNoteViewModel();
 
                 ViewBag.shoppingListID = id;
+                int pageSize = 2;
+                int pageNumber = page ?? 1;
 
-                viewModel.Items = _svc.Value.GetItemsByShoppingListID(id.Value);
+                viewModel.Items = _svc.Value.GetItemsByShoppingListID(id.Value).ToPagedList(pageNumber, pageSize);
                 if (shoppingListID != null)
                 {
                     ViewBag.itemID = id.Value;
                     ViewBag.shoppingListID = shoppingListID.Value;
-                    viewModel.Items = _svc.Value.GetItemsByShoppingListID(shoppingListID.Value);
+                    viewModel.Items = _svc.Value.GetItemsByShoppingListID(shoppingListID.Value).ToPagedList(pageNumber, pageSize);
                     viewModel.Note = _noteSvc.Value.GetNoteByItemID(id.Value);
                 }
                     

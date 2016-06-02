@@ -11,3 +11,20 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debu
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.csprojResolveAssemblyReference.cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\ShoppingListTeam3.Models.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\ShoppingListTeam3.Models.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\ShoppingListTeam3.Data.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\EntityFramework.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\ShoppingListTeam3.Data.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\EntityFramework.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.csprojResolveAssemblyReference.cache
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\obj\Debug\ShoppingListTeam3.Models.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\PagedList.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\PagedList.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Models\bin\Debug\PagedList.Mvc.xml

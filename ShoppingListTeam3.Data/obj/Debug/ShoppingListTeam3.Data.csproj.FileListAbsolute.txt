@@ -19,3 +19,28 @@ C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csproj.GenerateResource.Cache
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.dll
 C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\ShoppingListTeam3.Data.dll.config
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\ShoppingListTeam3.Data.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\ShoppingListTeam3.Data.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\EntityFramework.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\EntityFramework.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csprojResolveAssemblyReference.cache
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.InitialCreate.resources
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.Update.resources
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.ModifyShoppingListInDataLayer.resources
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.UpdateDataLayer.resources
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.FixingDataLayer.resources
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.Migrations.UpdateData.resources
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.csproj.GenerateResource.Cache
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\obj\Debug\ShoppingListTeam3.Data.pdb
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\PagedList.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\PagedList.Mvc.dll
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\PagedList.xml
+C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3.Data\bin\Debug\PagedList.Mvc.xml
