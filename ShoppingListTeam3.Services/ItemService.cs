@@ -54,7 +54,7 @@ namespace ShoppingListTeam3.Services
                         ShoppingListID = shoppingListId,
                         Content = vm.Content,
                         Priority = vm.Priority,
-                        IsChecked = vm.IsChecked,
+                        IsChecked = vm.IsChecked.Value,
                         CreatedUtc = DateTimeOffset.Now,
                     };
 
@@ -72,7 +72,7 @@ namespace ShoppingListTeam3.Services
 
                 entity.Content = vm.Content;
                 entity.Priority = vm.Priority;
-                entity.IsChecked = vm.IsChecked;
+                entity.IsChecked = vm.IsChecked.Value;
                 entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;

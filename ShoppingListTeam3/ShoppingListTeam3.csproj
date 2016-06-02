@@ -194,6 +194,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\ShoppingListController.cs" />
+    <Compile Include="Controllers\WebApi\ItemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,6 +275,7 @@
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Note\Create.cshtml" />
     <Content Include="Views\Note\Edit.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Checked.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

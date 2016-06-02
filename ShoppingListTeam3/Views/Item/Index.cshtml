@@ -1,7 +1,5 @@
 ﻿@model ShoppingListTeam3.Models.ItemWithNoteViewModel
-    @using PagedList.Mvc;
-
-<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Index";
@@ -40,7 +38,7 @@
         }
         <tr class="@selectedRow">
             <td>
-                @Html.DisplayFor(modelItem => item.IsChecked)
+                @Html.DisplayFor(modelItem => item.IsChecked, new { Id = item.ID })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Content)
@@ -56,8 +54,8 @@
             </td>
             <td>
                 @Html.ActionLink("Select", "Index", new { id = item.ID, shoppingListID = ViewBag.shoppingListID }) |
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID, shoppingListID = ViewBag.shoppingListID}) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID, ViewBag.shoppingListID})
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID, shoppingListID = ViewBag.shoppingListID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID, ViewBag.shoppingListID })
             </td>
         </tr>
     }
@@ -96,7 +94,7 @@ else
     if (ViewBag.itemID != null)
     {
         <p>There is no note associated to this item.</p>
-        @Html.ActionLink("Create a Note", "../Note/Create", new { id = @ViewBag.itemID, shoppingListID = @ViewBag.shoppingListID})
+        @Html.ActionLink("Create a Note", "../Note/Create", new { id = @ViewBag.itemID, shoppingListID = @ViewBag.shoppingListID })
     }
 }
 
@@ -104,6 +102,28 @@ else
 
 Page @(Model.Items.PageCount < Model.Items.PageNumber ? 0 : Model.Items.PageNumber) of @Model.Items.PageNumber
 
-    @Html.PagedListPager(Model.Items, page => Url.Action("Index", new { page }))
-            
-   
+@Html.PagedListPager(Model.Items, page => Url.Action("Index", new { page }))
+
+
+@section scripts {
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("i[data-toggle='check']")
+                .css({ "cursor": "pointer" })
+                .click(function (e) {
+                    var target = $(e.target);
+                    var itemId = target.attr("data-id");
+                    var checkSet = target.hasClass("glyphicon-check");
+
+                    $.ajax({
+                        method: checkSet ? "DELETE" : "POST",
+                        url: "/api/Item/" + itemId,
+                        data: null
+                    })
+                    .done(function (r) { target.removeClass(); target.addClass("glyphicon " + (checkSet ? "glyphicon-unchecked" : "glyphicon-check")); })
+                    .fail(function (r) { alert("Failed to change check status"); });
+                });
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}  

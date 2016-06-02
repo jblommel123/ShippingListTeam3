@@ -34,7 +34,7 @@ namespace ShoppingListTeam3.Controllers
         public ActionResult Index(int? page)
         {
             var ShoppingList = _svc.Value.GetList();
-            int pageSize = 10;
+            int pageSize = 5;
             int pageNumber = (page ?? 1);
             return View(ShoppingList.ToPagedList(pageNumber,pageSize));
         }

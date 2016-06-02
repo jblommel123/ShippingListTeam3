@@ -29,7 +29,7 @@ namespace ShoppingListTeam3.Controllers
                 var viewModel = new ItemWithNoteViewModel();
 
                 ViewBag.shoppingListID = id;
-                int pageSize = 2;
+                int pageSize = 5;
                 int pageNumber = page ?? 1;
 
                 viewModel.Items = _svc.Value.GetItemsByShoppingListID(id.Value).ToPagedList(pageNumber, pageSize);

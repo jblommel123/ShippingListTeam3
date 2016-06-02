@@ -18,7 +18,8 @@ namespace ShoppingListTeam3.Models
         [Required]
         public int Priority { get; set; }
         [Display(Name = "Checked")]
-        public bool IsChecked { get; set; }
+        [UIHint("Checked")]
+        public bool? IsChecked { get; set; }
         [Display(Name = "Created Date")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified Date")]

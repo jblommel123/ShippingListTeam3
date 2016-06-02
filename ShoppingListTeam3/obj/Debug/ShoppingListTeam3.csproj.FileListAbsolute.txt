@@ -164,3 +164,7 @@ C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\Sho
 C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.Mvc.dll
 C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.xml
 C:\Users\j-blo\Documents\Visual Studio 2015\Projects\Team3\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.Mvc.xml
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.Mvc.dll
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.xml
+C:\Users\Tin Le\Source\Repos\ShoppingListTeam3\ShoppingListTeam3\bin\PagedList.Mvc.xml
