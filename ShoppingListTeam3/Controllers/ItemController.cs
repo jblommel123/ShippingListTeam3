@@ -64,7 +64,7 @@ namespace ShoppingListTeam3.Controllers
         public ActionResult Create(int shoppingListID)
         {
             ViewBag.shoppingListID = shoppingListID;
-            return View();
+            return View(new ItemViewModel());
         }
 
         // POST: Item/Create
