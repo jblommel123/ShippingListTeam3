@@ -9,7 +9,8 @@
 
 <p>
     @Html.ActionLink("Back to Shopping List", "../ShoppingList/Index") &emsp; &emsp;
-    @Html.ActionLink("Create New", "Create", new { shoppingListID = ViewBag.shoppingListID })
+    @Html.ActionLink("Create New", "Create", new { shoppingListID = ViewBag.shoppingListID }) &emsp; &emsp;
+    @Html.ActionLink("Clear Items", "Clear", new { shoppingListID = ViewBag.shoppingListID }, new { onclick = "return confirm('Do you really want to clear all the items in this list?')" })
 </p>
 <table class="table">
     <tr>

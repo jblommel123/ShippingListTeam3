@@ -22,10 +22,6 @@ namespace ShoppingListTeam3.Controllers
         public ActionResult Index(int? id, int? shoppingListID, int? page)
         {
             {
-                //ViewBag.shoppingListID = id;
-
-                //var Item = _svc.Value.GetItemsByShoppingListID(id.Value);
-                //return View(Item);
                 var viewModel = new ItemWithNoteViewModel();
 
                 ViewBag.shoppingListID = id;
@@ -136,6 +132,16 @@ namespace ShoppingListTeam3.Controllers
         {
             _svc.Value.DeleteItem(id);
             return RedirectToAction("Index", new { id = shoppingListID });
+        }
+
+        public ActionResult Clear(int? shoppingListID)
+        {
+            if (shoppingListID == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            _svc.Value.DeleteAllItems(shoppingListID);
+            return RedirectToAction("Index", new { id = shoppingListID});
         }
     }
 

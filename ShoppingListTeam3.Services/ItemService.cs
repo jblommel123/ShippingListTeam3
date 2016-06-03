@@ -93,5 +93,13 @@ namespace ShoppingListTeam3.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public void DeleteAllItems(int? shoppingListID)
+        {
+            using (var ctx = new ShoppingListDbContext())
+            {
+                ctx.Database.ExecuteSqlCommand($"DELETE FROM Item WHERE ShoppingListID = {shoppingListID}");
+            }          
+        }
     }
 }
