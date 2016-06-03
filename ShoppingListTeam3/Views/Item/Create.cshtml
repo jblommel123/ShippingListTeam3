@@ -60,7 +60,7 @@
             @Html.LabelFor(model => model.IsChecked, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.IsChecked)
+                    @Html.CheckBox("IsChecked", Model.IsChecked ?? false)
                     @Html.ValidationMessageFor(model => model.IsChecked, "", new { @class = "text-danger" })
                 </div>
             </div>

@@ -39,5 +39,10 @@ namespace ShoppingListTeam3.Models
                     return "Nothing should be shown here";
             }
         }
+
+        public bool ToBool(bool? input)
+        {
+            return (bool)input;
+        }
     }
 }
