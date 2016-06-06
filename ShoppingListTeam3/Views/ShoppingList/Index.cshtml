@@ -1,25 +1,26 @@
 ﻿@model PagedList.IPagedList<ShoppingListTeam3.Models.ShoppingListViewModel>
 @using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Shopping List";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Shopping List", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Name
+            @Html.ActionLink("List", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
-            Group
+            @Html.ActionLink("Group", "Index", new { sortOrder = ViewBag.GroupSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
-            Date Created
+            @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
             Date Modified
@@ -27,32 +28,33 @@
         <th>Options</th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr style="color:@item.Color">
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Group)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModifiedUtc)
-        </td>
-        <td>
-            @Html.ActionLink("Show", "../Item/Index", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID}, new { @class = "btn btn-primary btn-sm" }) 
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID }, new { @class = "btn btn-primary btn-sm" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr style="color:@item.Color">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Group)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedUtc)
+            </td>
+            <td>
+                @Html.ActionLink("Show Item List", "../Item/Index", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Edit Shopping List", "Edit", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Delete Shopping List", "Delete", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+    }
 
 </table>
 
 <br />
 
-Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageNumber
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

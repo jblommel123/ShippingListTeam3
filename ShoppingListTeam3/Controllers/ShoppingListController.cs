@@ -31,12 +31,32 @@ namespace ShoppingListTeam3.Controllers
         }
 
         // GET: ShoppingList
-        public ActionResult Index(int? page)
+        public ActionResult Index(string sortOrder, int? page)
         {
             var ShoppingList = _svc.Value.GetList();
-            int pageSize = 5;
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewBag.GroupSortParm = String.IsNullOrEmpty(sortOrder) ? "group_desc" : "";
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    ShoppingList = ShoppingList.OrderByDescending(s => s.Name);
+                    break;
+                case "date_desc":
+                    ShoppingList = ShoppingList.OrderByDescending(s => s.CreatedUtc);
+                    break;
+                case "group_desc":
+                    ShoppingList = ShoppingList.OrderByDescending(s => s.Group);
+                    break;
+                default:
+                    ShoppingList = ShoppingList.OrderBy(s => s.Name);
+                    break; }
+                     
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(ShoppingList.ToPagedList(pageNumber,pageSize));
+            return View(ShoppingList.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: ShoppingList/Details/5

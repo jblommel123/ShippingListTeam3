@@ -19,24 +19,43 @@ namespace ShoppingListTeam3.Controllers
         private readonly Lazy<NoteService> _noteSvc = new Lazy<NoteService>();
 
         // GET: Item
-        public ActionResult Index(int? id, int? shoppingListID, int? page)
+        public ActionResult Index(int? id, int? shoppingListID, int? page, string sortOrder)
         {
             {
                 var viewModel = new ItemWithNoteViewModel();
-
-                ViewBag.shoppingListID = id;
-                int pageSize = 5;
+                int pageSize = 2;
                 int pageNumber = page ?? 1;
+                ViewBag.shoppingListID = id;
 
-                viewModel.Items = _svc.Value.GetItemsByShoppingListID(id.Value).ToPagedList(pageNumber, pageSize);
+                var items = _svc.Value.GetItemsByShoppingListID(id.Value);
+
+                ViewBag.CurrentSort = sortOrder;
+                ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+                ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+                ViewBag.PrioritySort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+
+                switch (sortOrder)
+                {
+                    case "name_desc":
+                        items = items.OrderByDescending(i => i.Content);
+                        break;
+                    case "date_desc":
+                        items = items.OrderByDescending(i => i.CreatedUtc);
+                        break;
+                    default:
+                        items = items.OrderBy(i => i.Content);
+                        break;
+                }
+
+                viewModel.Items = items.ToPagedList(pageNumber, pageSize);
                 if (shoppingListID != null)
                 {
                     ViewBag.itemID = id.Value;
                     ViewBag.shoppingListID = shoppingListID.Value;
-                    viewModel.Items = _svc.Value.GetItemsByShoppingListID(shoppingListID.Value).ToPagedList(pageNumber, pageSize);
+                    viewModel.Items = items.ToPagedList(pageNumber, pageSize);
                     viewModel.Note = _noteSvc.Value.GetNoteByItemID(id.Value);
                 }
-                    
+
                 return View(viewModel);
             }
         }
