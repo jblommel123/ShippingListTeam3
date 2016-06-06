@@ -1,6 +1,8 @@
 ﻿@model ShoppingListTeam3.Models.ItemWithNoteViewModel
 @using PagedList.Mvc;
 
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
 @{
     ViewBag.Title = "Index";
 }
@@ -9,20 +11,19 @@
 
 <p>
     @Html.ActionLink("Back to Shopping List", "../ShoppingList/Index") &emsp; &emsp;
-    @Html.ActionLink("Create New", "Create", new { shoppingListID = ViewBag.shoppingListID }) &emsp; &emsp;
-    @Html.ActionLink("Clear Items", "Clear", new { shoppingListID = ViewBag.shoppingListID }, new { onclick = "return confirm('Do you really want to clear all the items in this list?')" })
+    @Html.ActionLink("Create New", "Create", new { shoppingListID = ViewBag.shoppingListID })
 </p>
 <table class="table">
     <tr>
         <th></th>
         <th>
-            Content
+            @Html.ActionLink("Item", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
             Priority
         </th>
         <th>
-            Created Date
+            @Html.ActionLink("Date Created", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
             Modified Date
@@ -39,7 +40,7 @@
         }
         <tr class="@selectedRow">
             <td>
-                @Html.DisplayFor(modelItem => item.IsChecked, new { Id = item.ID })
+                @Html.DisplayFor(modelItem => item.IsChecked)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Content)
@@ -101,30 +102,6 @@ else
 
 <br />
 
-Page @(Model.Items.PageCount < Model.Items.PageNumber ? 0 : Model.Items.PageNumber) of @Model.Items.PageNumber
+Page @(Model.Items.PageCount < Model.Items.PageNumber ? 0 : Model.Items.PageNumber) of @Model.Items.PageCount
 
 @Html.PagedListPager(Model.Items, page => Url.Action("Index", new { page }))
-
-
-@section scripts {
-    <script language="javascript" type="text/javascript">
-        $(document).ready(function () {
-            $("i[data-toggle='check']")
-                .css({ "cursor": "pointer" })
-                .click(function (e) {
-                    var target = $(e.target);
-                    var itemId = target.attr("data-id");
-                    var checkSet = target.hasClass("glyphicon-check");
-
-                    $.ajax({
-                        method: checkSet ? "DELETE" : "POST",
-                        url: "/api/Item/" + itemId,
-                        data: null
-                    })
-                    .done(function (r) { target.removeClass(); target.addClass("glyphicon " + (checkSet ? "glyphicon-unchecked" : "glyphicon-check")); })
-                    .fail(function (r) { alert("Failed to change check status"); });
-                });
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-}  

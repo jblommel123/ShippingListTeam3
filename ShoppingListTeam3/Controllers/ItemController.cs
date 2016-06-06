@@ -23,7 +23,7 @@ namespace ShoppingListTeam3.Controllers
         {
             {
                 var viewModel = new ItemWithNoteViewModel();
-                int pageSize = 2;
+                int pageSize = 10;
                 int pageNumber = page ?? 1;
                 ViewBag.shoppingListID = id;
 
